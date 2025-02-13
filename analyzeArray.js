@@ -2,7 +2,7 @@ function analyzeArray(list) {
 	let arr = list;
 	arr.sort((a, b) => a - b);
 	let n = 0;
-	arr.map((l) => n + l);
+	arr.map((l) => n = n + l);
 	return {
 		average: n / arr.length,
 		min: arr[0],
