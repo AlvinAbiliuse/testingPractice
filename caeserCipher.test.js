@@ -1,5 +1,5 @@
 const caeserCipher = require("./caeserCipher.js");
 
 test("CaeserCipher Test", () => {
-	expect(caeserCipher("hello world!", 3)).toBe("khoor zruog!");
+	expect(caeserCipher("Hello World!", 3)).toBe("Khoor Zruog!");
 });
