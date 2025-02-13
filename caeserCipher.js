@@ -1,5 +1,5 @@
-function task(a, shift) {
-	if (list.indexOf(a) + shift >= list.length - 1) {
+function task(a, shift, list) {
+	if (list.indexOf(a) + shift > list.length - 1) {
 		return list[list.indexOf(a) + shift - (list.length - 1)];
 	} else return list[list.indexOf(a) + shift];
 }
@@ -14,9 +14,9 @@ function shifted(a, shift) {
 	} else return a;
 
 	if (capitalize == "true") {
-		return task(a.toLowerCase(), shift).toUpperCase();
+		return task(a.toLowerCase(), shift, list).toUpperCase();
 	}
-	return task(a, shift);
+	return task(a, shift, list);
 }
 
 function caeserCipher(str, shift) {
