@@ -1,14 +1,14 @@
 function shifted(a, shift) {
 	let list, capitalize, toReturn;
-	list = "abcdefghijklmnopqrstuvxyz".split("");
-	if (a in list) {
+	list = "abcdefghijklmnopqrstuvwxyz".split("");
+	if (list.includes(a)) {
 		capitalize = "false";
-	} else if (a.toLowerCase() in list) {
+	} else if (list.includes(a.toLowerCase())) {
 		capitalize = "true";
 	} else return a;
 
 	if (list.indexOf(a) + shift > list.length - 1) {
-		return list[list.indexOf(a) + shift - list.length];
+		return list[list.indexOf(a) + shift - (list.length - 1)];
 	} else return list[list.indexOf(a) + shift];
 
 	toReturn = "";
@@ -17,10 +17,9 @@ function shifted(a, shift) {
 function caeserCipher(str, shift) {
 	let newStr = [];
 	for (let i in str) {
-		newStr.push(shifted(i, shift));
+		newStr.push(shifted(str[i], shift));
 	}
 	return newStr.join("");
 }
 
 module.exports = caeserCipher;
-console.log(caeserCipher("Hello, World!"));
