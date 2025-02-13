@@ -1,4 +1,4 @@
-import { add, subtract, divide, multipy } = require(".calculator.js");
+const [add, subtract, divide, multipy] = require("./calculator.js");
 
 test("testing Calculator: ", () => {
 	expect(add(1, 5)).toBe(6);
